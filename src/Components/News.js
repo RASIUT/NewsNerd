@@ -10,7 +10,7 @@ export class News extends Component {
   }
 
   async componentDidMount() {
-    const url = `https://newsapi.org/v2/everything?q=india&from=2024-07-21&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page}&pageSize=6`;
+    const url = `https://newsapi.org/v2/everything?q=india&from=2024-08-02&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page}&pageSize=6`;
     let data = await fetch(url);
     let parsedData = await data.json();
     this.setState({
@@ -20,7 +20,7 @@ export class News extends Component {
   }
 
   handleNextClick = async () => {
-	const url = `https://newsapi.org/v2/everything?q=india&from=2024-07-21&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page + 1}&pageSize=6`;
+	const url = `https://newsapi.org/v2/everything?q=india&from=2024-08-02&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page + 1}&pageSize=6`;
 	let data = await fetch(url);
 	let parsedData = await data.json();
 	this.setState({
@@ -30,7 +30,7 @@ export class News extends Component {
   };
   
   handlePrevClick = async () => {
-	const url = `https://newsapi.org/v2/everything?q=india&from=2024-07-21&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page - 1}&pageSize=6`;
+	const url = `https://newsapi.org/v2/everything?q=india&from=2024-08-02&sortBy=publishedAt&apiKey=f2a47bf9b5614fa1a14b2e7ffe51c6e8&page=${this.state.page - 1}&pageSize=6`;
 	let data = await fetch(url);
 	let parsedData = await data.json();
 	this.setState({
